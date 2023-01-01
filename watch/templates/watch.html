@@ -1,0 +1,34 @@
+{% load static from static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href='{% static "watch/styles.css" %}' />
+    <title>AniPlayMe</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <div class="episodes">
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-1'>Ep. 1</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-2'>Ep. 2</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-3'>Ep. 3</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-4'>Ep. 4</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-5'>Ep. 5</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-6'>Ep. 6</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-7'>Ep. 7</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-8'>Ep. 8</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-9'>Ep. 9</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-10'>Ep. 10</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-11'>Ep. 11</a>
+        <a class="btn btn-primary" href='/watch/blue-lock/ep-12'>Ep. 12</a>
+    </div>
+    <div class="episode">
+        <video width="960" height="540" controls loop>
+            <source src='{% static "watch/"|add:anime|add:"/"|add:current_episode|add:".mp4" %}'>
+        </video>
+    </div>
+</body>
+</html>
